@@ -67,7 +67,8 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;color: #777;
+  border-top: 1px solid #eaeaea;
+  color: #777;
   a {
     color: #555;
     &:hover {
@@ -112,6 +113,8 @@ aside {
 .avatar {
   float: left;
   margin-right: 10px;
+  width: 96px;
+  height: auto;
 }
 .avatar_edit {
   margin-top: 15px;
@@ -148,5 +151,16 @@ section {
       list-style-type: none;
       font-size: 20px;
     }
+  }
+}
+
+/* Users index */
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
   }
 }
