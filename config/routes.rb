@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/about', to: 'commons#about'
   get '/contact', to: 'commons#contact'
   get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
 
   root 'commons#home'
 
