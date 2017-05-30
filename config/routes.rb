@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/home', to: 'commons#home'
+  get '/help', to: 'commons#help'
+  get '/about', to: 'commons#about'
+
+  root 'commons#home'
 end
