@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   root 'commons#home'
 
   resources :users
+  resources :entries, only: %i[create destroy]
 end

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: %i[index]
+
   def new
     @user = User.new
   end
@@ -28,4 +30,6 @@ class UsersController < ApplicationController
                                  :password_confirmation,
                                  :sex, :birthday, :address)
   end
+
+  private :user_params_limit
 end
