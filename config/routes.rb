@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/help', to: 'commons#help'
   get '/about', to: 'commons#about'
   get '/contact', to: 'commons#contact'
+  get '/signup', to: 'users#new'
 
   root 'commons#home'
 end
