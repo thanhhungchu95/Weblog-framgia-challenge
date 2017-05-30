@@ -1,2 +1,32 @@
 <% provide :title, 'Sign up' %>
 <h1>Sign up</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= f.label :name, 'Fullname' %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email, 'Email address' %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password, 'Password' %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirm password" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.label :sex, 'Male' %>
+      <%= f.radio_button :sex, true, class: 'form-control' %>
+      <%= f.label :sex, 'Female' %>
+      <%= f.radio_button :sex, false, class: 'form-control' %>
+
+      <%= f.label :birthday, 'Birthday' %>
+      <%= f.date_select :birthday, order: %i[day month year], class: 'form-control' %>
+
+      <%= f.label :address, 'address' %>
+      <%= f.text_field :address, class: 'form-control' %>
+
+      <%= f.submit "Create my account", class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
