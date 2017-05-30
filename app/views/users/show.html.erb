@@ -1,6 +1,6 @@
 <% provide :title, @user.name %>
 <div class="row">
-  <aside class="col-md-6">
+  <aside class="col-md-4">
     <section class="user_info">
       <%= avatar_for @user %>
       <ul>
@@ -27,4 +27,16 @@
       </ul>
     </section>
   </aside>
+
+  <div class="col-md-8">
+    <% if @user.entries.any? %>
+      <h3>
+        </a>Posts (<%= @user.entries.count %>)
+      </h3>
+      <ol class="entries">
+        <%= render @entries %>
+      </ol>
+      <%= will_paginate @entries %>
+    <% end %>
+  </div>
 </div>
